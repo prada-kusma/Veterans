@@ -20,7 +20,7 @@
     }
     .jumbotron {
         color: white;
-        background-image: url(/DASDAZ/assets/background.jpg);
+        background-image: url("/DASDAZ/assets/background.jpg");
         background-size:cover
     }
     .card {
@@ -82,7 +82,7 @@
                 <tr>
                     <td>
                         <div class="card" style="width: 18rem;" onclick="fungsi('revolusi')">
-                            <img src="/DASDAZ/assets/stories/Revolusi.jpg" class="card-img-top" alt="...">
+                            <img src="assets/stories/Revolusi.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <p class="card-text"><span class="bold">Perang Kemerdekaan</span>
                                 <br>Perang skala nasional mempertahankan kemerdekaan
@@ -92,7 +92,7 @@
                     </td>
                     <td>
                         <div class="card" style="width: 18rem;" onclick="fungsi('trikora')">
-                            <img src="/DASDAZ/assets/stories/OperasiTrikora.jpg" class="card-img-top" alt="...">
+                            <img src="assets/stories/OperasiTrikora.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <p class="card-text"><span class="bold">Operasi Trikora</span>
                                 <br>Perang Indonesia-Belanda memperebutkan Irian Barat 
@@ -101,7 +101,7 @@
                         </div>
                     </td>
                     <td>    <div class="card" style="width: 18rem;" onclick="fungsi('dwikora')">
-                        <img src="/DASDAZ/assets/stories/OperasiDwikora.png" class="card-img-top" alt="...">
+                        <img src="assets/stories/OperasiDwikora.png" class="card-img-top" alt="...">
                         <div class="card-body">
                         <p class="card-text"><span class="bold">Operasi Dwikora</span>
                             <br>Konfrontasi Indonesia-Malaysia dan Inggris
@@ -112,7 +112,7 @@
                 <tr>
                     <td>
                         <div class="card" style="width: 18rem;" onclick="fungsi('seroja')">
-                            <img src="/DASDAZ/assets/stories/OperasiSeroja.jpg" class="card-img-top" alt="...">
+                            <img src="assets/stories/OperasiSeroja.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <p class="card-text"><span class="bold">Operasi Seroja</span>
                                 <br>Invasi skala besar Indonesia ke Timor Timur 
@@ -122,7 +122,7 @@
                     </td>
                     <td>
                         <div class="card" style="width: 18rem;" onclick="fungsi('gam')">
-                            <img src="/DASDAZ/assets/stories/GAM.jpg" class="card-img-top" alt="...">
+                            <img src="assets/stories/GAM.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <p class="card-text"><span class="bold">Gerakan Aceh Merdeka</span>
                                 <br>Daerah Operasi Militer dan Insurgensi Aceh 
@@ -132,7 +132,7 @@
                     </td>
                     <td>
                         <div class="card" style="width: 18rem;" onclick="fungsi('opm')">
-                            <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                            <img src="assets/stories/OPM.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <p class="card-text"><span class="bold">Organisasi Papua Merdeka</span>
                                 <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
@@ -356,7 +356,7 @@
         <h1>Operasi Seroja 1975-1999</h1> <br>
         <center><img src="assets/stories/OperasiSeroja.jpg" width="50%"></center>
         <h2>Latar Belakang</h2>
-        <p>
+        <p style="text-align: justify;">
             Invasi Indonesia ke Timor Timur, atau yang sekarang dikenal dengan negara Timor Leste, dilatarbelakangi karena kondisi politik di wilayah tersebut.
             Peristiwa ini bermula saat Portugis, kolonial Timor Timur, ingin memerdekakan tanah jajahannya itu.
             Pada masa transisi itu, Pemerintah Portugis memberikan hak kepada rakyat Timor Timur untuk menentukan kemerdekaan mereka.
@@ -533,7 +533,7 @@
     <div id="Veteran_Seroja1" class="container content" style="display:none">
         <h1>Penerjunan di kota Baucau</h1>
         <center><img src="/DASDAZ/assets/stories/Veteran/Seroja/LuhutSeroja.jpeg" alt=""></center>
-        <p>
+        <p style="text-align: justify;">
             "Awal Desember, 42 tahun yang lalu, adalah momen di mana saya kehilangan teman-teman saya di sebuah operasi militer. Wajah-wajah mereka adalah pengingat bagi saya untuk terus mengabdi kepada Bangsa dan Negara.
             <br>
             <br>
@@ -673,6 +673,7 @@
         x[i].style.display = "none"; 
         }
         document.getElementById(namaContent).style.display = "block"; 
+        window.scrollTo(0, 0);
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
