@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <title>Veterans</title>
+<style>
+    body {
+        font-family: 'Roboto Slab', serif;
+    }
+    .navbar {
+        background-color: darkslategray;
+        margin-bottom: -65px;
+    }
+    .jumbotron {
+        color: white;
+        background-image: url(/DASDAZ/assets/background.jpg);
+        background-size:cover
+    }
+    .card {
+        margin: 10px 10px;
+    }
+    .theForm {
+        margin: 0 20px;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .card-img-top:hover { 
+        transition: 1s;
+        transform: scale(1.2);
+    }
+</style>
+</head>
+<body>
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+        <img src="assets/logo.png" style="width: 100px;"> <br>
+        <h1 class="display-5">VETERANS</h1>
+        <p>website sejarah konflik Indonesia (1945-sekarang) <br> dan cerita dari sudut pandang saksi sejarah.</p>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <button class="btn" onclick="fungsi('home')">HOME</button>
+                <button class="btn" onclick="fungsi('stories')">STORIES</button>
+                <button class="btn" onclick="fungsi('submit')">SUBMIT YOUR STORY</button>
+                <button class="btn" onclick="fungsi('about')">ABOUT</button>
+            </div>
+            </div>
+        </nav>
+        </div>
+    </div>
+
+    <div id="home" class="container content" style="display:none">
+        <!-- Example row of columns -->
+        <h1>Home</h1>
+        <hr>
+        <p>Website ini didedikasikan untuk edukasi sejarah perang di Indonesia yang jarang diajarkan atau dibahas. 
+            <br>dan melihat sejarah dari sisi saksi mata yang pernah terlibat dari peristiwa itu
+            <br>Selamat membaca dan berbagi pengalaman.
+        </p>
+
+        <hr>
+    </div>
+
+    <div id="stories" class="container content" style="display:none">
+        <h1>Stories</h1>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <table>
+                <tr>
+                    <td>
+                        <div class="card" style="width: 18rem;" onclick="fungsi('revolusi')">
+                            <img src="/DASDAZ/assets/stories/Revolusi.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><span class="bold">Perang Kemerdekaan</span>
+                                <br>Perang skala nasional mempertahankan kemerdekaan
+                                <br>1945-1950</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" style="width: 18rem;" onclick="fungsi('trikora')">
+                            <img src="/DASDAZ/assets/stories/OperasiTrikora.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><span class="bold">Operasi Trikora</span>
+                                <br>Perang Indonesia-Belanda memperebutkan Irian Barat 
+                                <br>1961-1962</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>    <div class="card" style="width: 18rem;" onclick="fungsi('dwikora')">
+                        <img src="/DASDAZ/assets/stories/OperasiDwikora.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text"><span class="bold">Operasi Dwikora</span>
+                            <br>Konfrontasi Indonesia-Malaysia dan Inggris
+                            <br>1963-1966</p>
+                        </div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card" style="width: 18rem;" onclick="fungsi('seroja')">
+                            <img src="/DASDAZ/assets/stories/OperasiSeroja.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><span class="bold">Operasi Seroja</span>
+                                <br>Invasi skala besar Indonesia ke Timor Timur 
+                                <br>1975-1991</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" style="width: 18rem;" onclick="fungsi('gam')">
+                            <img src="/DASDAZ/assets/stories/GAM.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><span class="bold">Gerakan Aceh Merdeka</span>
+                                <br>Daerah Operasi Militer dan Insurgensi Aceh 
+                                <br>1976-2005</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" style="width: 18rem;" onclick="fungsi('opm')">
+                            <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text"><span class="bold">Organisasi Papua Merdeka</span>
+                                <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                                <br>1977-Sekarang</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>    
+        </div>
+    </div>
+    
+    <!--Isi Cerita Kemerdekaan-->
+    <div id="revolusi" class="container content" style="display:none">
+        <h1>Perang Kemerdekaan 1945-1950</h1> <br>
+        <center><img src="assets/stories/Revolusi.jpg" width="50%"></center>
+        <h2>Latar Belakang</h2>
+        <p style="text-justify: auto;">
+            Setelah menyerahnya Jepang pada perang dunia kedua, Indonesia menyatakan kemerdekaannya. 
+            Namun, sesuai dengan perjanjian Wina pada tahun 1942, negara-negara sekutu bersepakat untuk mengembalikan wilayah-wilayah yang kini diduduki Jepang pada pemilik koloninya masing-masing bila Jepang berhasil diusir dari daerah pendudukannya.
+            Menjelang akhir perang tahun 1945, sebagian wilayah Indonesia telah dikuasai oleh tentara Sekutu. 
+            Satuan tentara Australia telah mendaratkan pasukannya di Makasar dan Banjarmasin, sedangkan Balikpapan telah diduduki oleh Australia sebelum Jepang menyatakan menyerah kalah. 
+            Sementara Pulau Morotai dan Irian Barat bersama-sama dikuasai oleh satuan tentara Australia dan Amerika Serikat di bawah pimpinan Jenderal Douglas MacArthur, Panglima Komando Kawasan Asia Barat Daya (South West Pacific Area Command/SWPAC).
+            <br>
+            <br>
+            Setelah perang usai, berdasarkan Civil Affairs Agreement, pada 24 Agustus 1945 pihak Inggris dan Belanda menyutujui kesepakatan untuk mengkolonialisasi kembali Indonesia. 
+            Pada 29 September 1945, tentara Inggris selaku wakil Sekutu tiba di Jakarta, dengan didampingi Dr. Charles van der Plas, wakil Belanda pada Sekutu. 
+            Kehadiran tentara Sekutu ini, diboncengi NICA (Netherland Indies Civil Administration - pemerintahan sipil Hindia Belanda) yang dipimpin oleh Dr. Hubertus J van Mook, ia dipersiapkan untuk membuka perundingan atas dasar pidato siaran radio Ratu Wilhelmina tahun 1942 (statkundige concepti atau konsepsi kenegaraan), tetapi ia mengumumkan bahwa ia tidak akan berbicara dengan Soekarno yang dianggapnya telah bekerja sama dengan Jepang. Pidato Ratu Wilhemina itu menegaskan bahwa di kemudian hari akan dibentuk sebuah persemakmuran yang di antara anggotanya adalah Kerajaan Belanda dan Hindia Belanda, di bawah pimpinan Ratu Belanda.
+            <br>
+            <br>
+            Karena proklamasi pernyataan kemerdekaan Indonesia yang tidak diakui, Terjadilah pertempuran di berbagai daerah di Indonesia antara tentara Indonesia dan rakyat melawan pihak Belanda.
+            Indonesia mengalami banyak kekalahan karena bertempur secara berhadapan dengan senjata seadanya dan pengetahuan tentang senjata modern yang minim.
+            Menyadari kekurangan itu, pasukan Indonesia memilih perang secara tidak langsung atau gerilya untuk menghindari kerugian yang lebih besar.
+            Hal ini dimanfaatkan Belanda dengan menuduh pasukan Indonesia sebagai teroris yang membuat kekacauan di berbagai daerah.
+            <br>
+            <br>
+            Perang ini diakhiri dengan kemenangan dari pihak Indonesia dalam jalur diplomasi di Deen Hag, Belanda setelah dunia mengakui keberadaan Indonesia karena sukses merebut kembali ibukotanya, Yogyakarta, meskipun bertahan hanya beberapa jam.
+        </p>
+        
+        <hr>
+        <h1>Saksi Mata Sejarah</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;" onclick="fungsi('Veteran_Kemerdekaan1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Shohib</span>
+                    <br>Laskar hizbullah
+                    <br>15 Oktober 1945</p>
+                </div>
+            </div>
+
+        </div>
+        
+    
+    </div>
+
+    <!--Isi Cerita Trikora-->
+    <div id="trikora" class="container content" style="display:none">
+        <h1>Operasi Trikora 1961-1963</h1> <br>
+        <center><img src="assets/stories/OperasiTrikora.jpg" width="50%"></center>
+        <h2>Latar Belakang</h2>
+        <p>
+            Setelah perang revolusioner mempertahankan kemerdekaan Indonesia melawan Kerajaan Belanda, Irian Barat masih belum mendapatkan status yang jelas. 
+            Dalam Konferensi Meja Bundar di Belanda, Belanda mengakui kemerdekaan Indonesia dari Sumatra sampai Sulawesi. 
+            Namun, tidak dengan Irian Barat. 
+            Kedua belah pihak, Republik dan Kerajaan Belanda, sama-sama merasa berhak bahwa Irian Barat adalah milik mereka. 
+            Akhirnya permasalahan Irian Barat ini ditunda dengan begitu lama tanpa ada status yang jelas.
+            <br>
+            <br>
+            Indonesia pada saat itu tidak terlalu mempedulikan status Irian Barat karena masih disibukkan konsolidasi penyatuan dari wilayah baru yang diakui belanda sebagai salah satu bagian dari Indonesia. 
+            Pemberontakan seperti PRRI, RMS, dan sebagainya yang terhitung banyak, perekonomian yang masih timpang tindih, dan sistem politik yang harus disusun untuk negara baru merdeka itu membuat pihak Indonesia tidak ada waktu untuk mengurus Irian Barat. 
+            Hal ini dimanfaatkan Belanda dengan membangun Irian Barat menjadi negara boneka. Belanda membangun infrastruktur seperti jalan, bandara, hingga pelabuhan untuk memudahkan akses di Irian Barat, membangun komite nasional, serta membangun militer papua yang dilatih oleh korps mariner belanda.
+            <br>
+            <br>
+            Pada tanggal 19 Desember 1961, Presiden Soekarno pergi ke Yogyakarta untuk melakukan pidato yang dihadiri oleh masyarakat Indonesia dari berbagai daerah. Dalam pidato yang disaksikan seluruh masyarakat Indonesia itu, Presiden Soekarno menegaskan bahwa Irian Barat harus Kembali ke pangkuan Ibu Pertiwi. Dalam pidato itu juga, Presiden Soekarno membentuk suatu operasi yang dinamakan “Operasi Trikora” yang isinya ada 3 poin penting:
+            <br>
+            <ul>
+                <li>Gagalkan pembentukan negara boneka di Irian Barat</li>
+                <li>Kibarkan bendera sang saka merah putih di bumi cendrawasih</li>
+                <li>Persiapkan mobilisasi umum mempertahankan kemerdekaan kesatuan tanah air dan bangsa</li>
+            </ul>
+            <br>
+            <br>
+            Pada tanggal 2 Januari 1962, Soekarno membentuk Komando Mandala untuk merencanakan, mempersiapkan, dan menggelar operasi militer penggabungan Irian Barat dengan Indonesia.
+            <br>
+            <br>
+            Agar Operasi Trikora berjalan dengan sukses, Indonesia meminta bantuan ke Amerika Serikat untuk mendukung Indonesia melawan Belanda. 
+            Namun, Amerika Serikat menolaknya karna Kerajaan Belanda adalah anggota dari NATO, organisasi untuk menyaingi Uni Soviet, yang dipimpin oleh Amerika Serikat itu sendiri.
+            <br>
+            <br>
+            Karna ditolak oleh Amerika Serikat, Indonesia berpindah mencari bantuan ke Uni Soviet. 
+            Bantuan itu disetujui oleh Uni Soviet dan menyilahkan Indonesia untuk melakukan pembelian beberapa unit senjata dan alusista perang sebanyak 2,5 miliar USD dengan memilih apapun yang Indonesia mau dengan pembayaran jangka Panjang. 
+            Selain itu, Indonesia juga melakukan diplomasi ke negara-negara penting agar tidak ikut campur dalam perang Indonesia-Belanda memperebutkan Irian Barat.
+            <br>
+            <br>
+            Uni Soviet juga membantu dengan mengirimkan unit mereka untuk membantu teknisi Indonesia memperbaiki dan mengajarkan cara menggunakan alusista Uni Soviet secara rahasia. 
+            Namun, Indonesia membocorkannya ke Amerika Serikat untuk membuat Amerika Serikat mempertimbangkan bagaimana jika Indonesia menjadi komunis jika terus menerus dibantu oleh Uni Soviet.
+            <br>
+            <br>
+            Perang pun tak dapat dielakkan. 
+            Indonesia melancarkan serangan besar-besaran dengan melakukan operasi amfibi bernama “Operasi Jayawijaya” yang mirip seperti operasi D-Day pada saat  perang dunia kedua. 
+            Belanda merespon dengan serius dengan mengerahkan sepuluh ribu lebih pasukan untuk mempertahankan Irian Barat. 
+            <br>
+            <br>
+            Meskipun kalah jumlah dan mempunyai alusista terbatas, Belanda tetap lebih unggul dalam pertempuran melawan TNI. 
+            Ini dikarenakan hampir seluruh rencana operasi militer Indonesia ketahuan oleh tentara Belanda. 
+            Belanda mempunyai sistem radar bernama Marid 6 Netherland New Guinea dan badan intelegensi rahasia yang berhasil dan menyadap seluruh data-data operasi militer Indonesia di Irian barat.
+            <br>
+            <br>
+            Karena perang berjalan lama dan sengit, pertempuran memperebutkan Irian Barat ini akhirnya sukses menyita perhatian dunia melihat kegigihan ambisi Indonesia yang ingin merebut Irian Barat dari Belanda. 
+            Perang pun berakhir dengan dimenangkan oleh Indonesia dengan jalur diplomasi. 
+            Kekhawatiran Amerika Serikat membayangkan Indonesia bergabung ke blok komunis membuat Belanda harus menuruti kemauan Indonesia untuk memberikan Irian Barat. 
+            Akhirnya Irian Barat jatuh ke tangan Indonesia melalui mediasi oleh PBB.
+            <hr>
+        </p>
+        
+        <hr>
+        <h1>Saksi Mata Sejarah</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;" onclick="fungsi('veteran1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Shohib</span>
+                    <br>Laskar hizbullah
+                    <br>15 Oktober 1945</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('veteran1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Shohib</span>
+                    <br>Laskar hizbullah
+                    <br>15 Oktober 1945</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('veteran1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Shohib</span>
+                    <br>Laskar hizbullah
+                    <br>15 Oktober 1945</p>
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+
+    <!--Isi Cerita Dwikora-->
+    <div id="dwikora" class="container content" style="display:none">
+        <h1>Operasi Dwikora 1963-1966</h1> <br>
+        <center><img src="assets/stories/OperasiDwikora.png" width="50%"></center>
+        <h2>Latar Belakang</h2>
+        <p>
+            Operasi Dwikora atau Konfrontrasi Indonesia-Malaysia diawali dengan ketidaksukaannya Indonesia terhadap kemerdekaan Malaysia yang ada campur tangan Inggris.
+            Indonesia, yang notabene dengan anti-kolonialisme dan anti-imperialisme, menolak keras kemerdekaan malaysia yang dianggapnya negara boneka dari Inggris.
+            Indonesia menganggap jika berdirinya negara Federasi Malaysia akan mengancam kedaulatan republik. dengan alasan ini, Indonesia, yang didukung oleh partai komunis dan negara-negara komunis lainnya, menyatakan perang terhadap persemakmuran Malaysia.
+            <br>
+            <br>
+            Meskipun ini dinamakan konfrontasi, tapi kedua belah pihak tidak ada niatan untuk bertempur. Hal ini dikarenakan pertimbangan dari pemerintah Indonesia jika melancarkan perang besar-besaran akan menguras banyak biaya apalagi perekonomian Indonesia waktu itu belum stabil sepenuhnya.
+            Disisi lain, pihak Inggris dengan persemakmurannya yang mendukung Malaysia juga berpikir akan menguras banyak biaya lagi setelah biaya itu digunakan untuk memberantas pemberontakan komunis di Semenanjung Malaya.
+            <br>
+            <br>
+            Setelah pidato dari Soekarno yang terkenal sebagai "Ganyang Malaysia", Indonesia memobilisasi pasukan di perbatasan Sabah dan Sarawak.
+            Tidak seperti saat Trikora, TNI berniat melancarkan serangan ke Sabah dan Sarawak dengan taktik gerilya dengan menggunakan para pemberontak dari wilayah tersebut dan menyusup bersama mereka.
+            di pihak persemakmuran, mereka lebih cenderung membangun pos-pos pertahanan dan patroli daripada menyerang Indonesia secara langsung.
+            <br>
+            <br>
+            Selama pertempuran, TNI selalu menyangkal bahwa pihaknya terlibat dalam penyerangan-penyerang di pos-pos pertahanan Inggris. 
+            Mereka mengaku hanya melatih para pemberontak dan menyamar sebagai TNKU (Tentara Nasional Kalimantan Utara).
+            Konfrontasi Indonesia-Malaysia berlangsung selama tiga tahun lamanya yang selama pertempuran itu diungguli oleh Inggris.
+            Dengan pengalaman tempur yang banyak dan logistik dan persenjataan yang lebih canggih, Inggris selalu berhasil mematahkan serangan dari penyusup Indonesia dan para pemberontak.
+            <br>
+            <br>
+            Pertempuran ini akhirnya mereda pada tahun 1965 karena kondisi politik Indonesia saat itu. 
+            Peristiwa G30S PKI dan penggulingan orde lama menuju orde baru membuat Indonesia berubah haluan yang awalnya mendukung pemberontakan komunis di Sabah dan Sarawak menjadi sepenuhnya mendukung kedaulatan Malaysia.
+            Operasi Dwikora, yang didukung oleh PKI, akhirnya perlahan berhenti dan pertempuran dimenangkan oleh Persemakmuran Inggris.
+            <br>
+            <br>
+            Informasi tentang Konfrontasi Indonesia-Malaysia ini sangat minim dikarenakan Inggris merahasiakan pertempuran ini sampai sekarang.
+            Disisi lain, tentara Indonesia yang berhaluan komunis, yang saat itu mendominasi pasukan pada saat operasi dwikora, kebanyakan dihilangkan atau dieksekusi oleh Angkatan Darat.
+            Operasi Dwikora adalah perang yang terlupakan oleh masyarakat Indonesia. Kebanyakan kisahnya simpang siur dan saling bertabrakan dari kedua belah pihak.
+            Estimasi dari korban di pihak Inggris menyatakan puluhan dan Indonesia ada ratusan menurut informasi dari pihak Inggris.
+            Sementara informasi dari pihak Indonesia menyatakan estimasi korban hanya puluhan dan pihak Inggris ada ratusan.
+        </p>
+        
+        <hr>
+        <h1>Saksi Mata Sejarah</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;" onclick="fungsi('veteran1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Shohib</span>
+                    <br>Laskar hizbullah
+                    <br>15 Oktober 1945</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi2')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi3')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <!--Isi Cerita Seroja-->
+    <div id="seroja" class="container content" style="display:none">
+        <h1>Operasi Seroja 1975-1999</h1> <br>
+        <center><img src="assets/stories/OperasiSeroja.jpg" width="50%"></center>
+        <h2>Latar Belakang</h2>
+        <p>
+            Invasi Indonesia ke Timor Timur, atau yang sekarang dikenal dengan negara Timor Leste, dilatarbelakangi karena kondisi politik di wilayah tersebut.
+            Peristiwa ini bermula saat Portugis, kolonial Timor Timur, ingin memerdekakan tanah jajahannya itu.
+            Pada masa transisi itu, Pemerintah Portugis memberikan hak kepada rakyat Timor Timur untuk menentukan kemerdekaan mereka.
+            Merespon kebijakan ini, rakyat Timor Timur membentuk 3 partai yang sangat bertolak belakang.
+            Yaitu, ASDT, yang kemudian hari berubah nama menjadi Fretilin, mendukung kemerdekaan Timor Timur secara penuh, UDT yang mendukung negaranya menjadi protektorat Protugal, dan APODETI yang mendukung Timor Timur bergabung dengan Indonesia.
+            <br>
+            <br>
+            Munculnya 3 partai dengan paham yang berbeda ini, Timor Timur mengalami perang saudara yang dimenangkan oleh partai Fretilin.
+            Pada 28 November 1975, dibawah partai Fretilin, Timor Timur menyatakan kemerdekaannya dan mengubah namanya menjadi Timor Leste.
+            Tetapi negara yang baru merdeka itu tidak bertahan lama karena tak berselang lama Indonesia datang menginvasi Timor Timur.
+            <br>
+            <br>
+            Sebenarnya Indonesia tidak ada niatan untuk menginvasi Timor Timur.
+            Tetapi, karena adanya permintaan bantuan dari APODETI dan UDT untuk menginvasi Timor Timur, Indonesia akhirnya mempertimbangkan untuk menginvasi.
+            Indonesia semakin memantapkan niatnya untuk menginvasi Timor Timur mengetahui jika Fretilin bersahabat dengan komunis.
+            Melihat hal ini, Indonesia, dibawah orde baru yang anti-komunis, semakin memantapkan niatnya untuk menginvasi Timor Timur.
+            Dengan alasan menghilangkan komunis di wilayah tersebut serta mendapatkan dukungan dari Australia dan Amerika Serikat dan sebagian rakyat Timor Timur, Indonesia akhirnya mengerahkan kekuatannya untuk menginvasi Timor Timur. 
+            <br>
+            <br>
+            Pada 7 Desember 1975, Indonesia mengerahkan pasukan gabungan TNI/POLRI ke wilayah Timor Timur. 
+            Operasi penyerangan ini dinamakan "Operasi Seroja".
+            Operasi ini diawali dengan membombardir ke Dili lalu mendaratkan pasukan amfibinya di pantai dekat kota Dili.
+            Untuk lebih efektif, TNI mengerahkan pasukan penerjunnya mendarat di beberapa titik kota Dili untuk memporak-porandakan pertahanan pasukan Fretilin.
+            Hanya dalam beberapa jam, kota Dili jatuh ke tangan Indonesia.
+            Setelah jatuhnya kota Dili, pasukan gabungan TNI/POLRI merebut kota Baucau pada tanggal 10 Desember 1975.
+            Dengan jatuhnya dua kota penting Timor Timur, pada tanggal 25 Desember 1975, Indonesia mengirimkan pasukannya sebanyak 10.000-15.000 pasukan untuk menguasai beberapa wilayah penting lainnya.
+            Dengan serangan besar-besaran ini, Timor Timur jatuh ke tangan Indonesia dan menjadi provinsi termuda di Indonesia.
+            <br>
+            <br>
+             Meskipun Timor Timur telah masuk ke wilayah Indonesia, masih ada perjuangan dari pihak tentara Fretilin untuk melawan Indonesia.
+             Tentara Fretilin berperang secara gerilya dengan markas mereka yang ada di gunung-gunung di Timor Timur.
+             Memberantas sisa-sisa pasukan Fretilin di medan yang sulit, pada 1978-1979, TNI melakukan pengepungan untuk memutus jalur logistik mereka dan berpatroli dengan helikopter secara berkala.
+             <br>
+             <br>
+            Timor Timur jatuh kembali ke tangan Fretilin setelah berakhirnya orde baru.
+            Karena tragedi pembantaian di Santa Cruz yang dilakukan oleh TNI kepada pro kemerdekaan Timor Leste, pihak internasional memaksa Indonesia untuk melepaskan Timor Timur.
+            Pada masa Reformasi, Presiden Habibie memberikan pemilihan keputusan kepada rakyat Timor Timur untuk memilih apakah ingin memisahkan diri atau ingin bergabung ke Indonesia.
+            Pemilihan itu menghasilkan suara ingin memisahkan diri sebanyak 75%, ingin masuk bagian Indonesia sebanyak 25%.
+            Dengan ini resmi bahwa Timor Timur lepas dari tangan Indonesia. 
+        </p>
+        
+        <hr>
+        <h1>Saksi Mata Sejarah</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;" onclick="fungsi('Veteran_Seroja1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Seroja/LuhutSeroja.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Luhut Binsar Pandjaitan</span>
+                    <br>Mayor, Komandan Tim C Group 1 Para Komando Satuan Lintas Udara
+                    <br>7 Desember 1975</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi2')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi3')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!--Isi Cerita GAM-->
+    <div id="gam" class="container content" style="display:none">
+        <h1>Gerakan Aceh Merdeka 1976-2005</h1> <br>
+        <center><img src="assets/stories/GAM.jpg" width="50%"></center>
+        <h2>Latar Belakang</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis accusantium voluptate error voluptates, repellendus voluptas quae quam minus reprehenderit nulla quos necessitatibus repudiandae earum sequi asperiores perspiciatis pariatur commodi debitis!</p>
+        
+        <hr>
+        <h1>Saksi Mata Sejarah</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;" onclick="fungsi('veteran1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Shohib</span>
+                    <br>Laskar hizbullah
+                    <br>15 Oktober 1945</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi2')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi3')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!--Isi Cerita OPM-->
+    <div id="opm" class="container content" style="display:none">
+        <h1>Organisasi Papua Merdeka</h1> <br>
+        <center><img src="assets/stories/OPM.jpg" width="50%"></center>
+        <h2>Latar Belakang</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis accusantium voluptate error voluptates, repellendus voluptas quae quam minus reprehenderit nulla quos necessitatibus repudiandae earum sequi asperiores perspiciatis pariatur commodi debitis!</p>
+        
+        <hr>
+        <h1>Saksi Mata Sejarah</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;" onclick="fungsi('veteran1')">
+                <img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text"><span class="bold">Shohib</span>
+                    <br>Laskar hizbullah
+                    <br>15 Oktober 1945</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi2')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" onclick="fungsi('saksi3')">
+                <img src="/DASDAZ/assets/stories/OPM.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Organisasi Papua Merdeka
+                    <br>Daerah Operasi Militer dan Insurgensi Papua Barat 
+                    <br>1977-Sekarang</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    
+    <!--Isi Cerita Veteran Kemerdekaan-->
+    <div id="Veteran_Kemerdekaan1" class="container content" style="display:none">
+        <h1>Bertempur di Umur 16 Tahun</h1>
+        <center><img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Veteran_Kemerdekaan1(Sohib).jpg" alt=""></center>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quo tempore officia, voluptas expedita similique doloribus! Ab, reprehenderit aspernatur labore doloremque temporibus placeat, blanditiis tenetur quidem vel, deleniti qui ullam.</p>
+        <center><img src="/DASDAZ/assets/stories/Veteran/Kemerdekaan/Semarang(Shohib).jpg" alt=""></center>
+    </div>
+    <div id="saksi2" class="container content" style="display:none">
+        <h1>saksi2</h1>
+    </div>
+    <div id="saksi3" class="container content" style="display:none">
+        <h1>saksi3</h1>
+    </div>
+    <!--Isi Cerita Veteran Trikora-->
+    <div id="trikora" class="container content" style="display:none">
+        
+    </div>
+    <!--Isi Cerita Veteran Dwikora-->
+    <div id="dwikora" class="container content" style="display:none">
+        
+    </div>
+    <!--Isi Cerita Veteran Seroja-->
+    <div id="Veteran_Seroja1" class="container content" style="display:none">
+        <h1>Penerjunan di kota Baucau</h1>
+        <center><img src="/DASDAZ/assets/stories/Veteran/Seroja/LuhutSeroja.jpeg" alt=""></center>
+        <p>
+            "Awal Desember, 42 tahun yang lalu, adalah momen di mana saya kehilangan teman-teman saya di sebuah operasi militer. Wajah-wajah mereka adalah pengingat bagi saya untuk terus mengabdi kepada Bangsa dan Negara.
+            <br>
+            <br>
+            Ijinkan saya sedikit berbagi kisah di Operasi “Seroja” 7 Desember 1975.
+            <br>
+            <br>
+            Lewat tengah malam WIB, atau dini hari 7 Desember 1975, sebanyak sepuluh pesawat C-130 B Hercules lepas landas dari Iswahyudi terbang ke arah tenggara hingga sampai di selatan Pulau Jawa, terbang lurus hingga melewati Bali bagian selatan.
+            <br>
+            <br>
+            Di atas Pulau Alor, konvoi pesawat-pesawat angkut berat itu menurunkan ketinggian terbang hingga jadi 7.000 feet saja. Bel pada ruang pesawat berdering pendek tiga kali dan lampu merah menyala di atas pintu sebagai tanda agar pasukan lintas udara berdiri.
+            <br>
+            <br>
+            Baik pasukan Baret Merah (Kopassandha atau sekarang disebut Kopassus) dan pasukan Baret Hijau (Kostrad) mengkaitkan ujung static line pada empat kabel baja yang memanjang dalam ruang pesawat dan memasang pen pengaman, tangan kiri memegang bibir kiri pintu pesawat dan tangan kanan siaga di parasut cadangan di dada... Pasukan siap terjun..!
+            <br>
+            <br>
+            Seingat saya, setelah penerbangan selama empat jam lebih, anak buah sudah mulai lelah, tegang dan juga banyak yang mengalami mabuk udara. Maklumlah, anak-anak Baret Merah sejak pagi sudah berada di Halim, dan praktis tidak bisa beristirahat cukup. Jadi begitu lampu merah menyala mereka langsung berdiri, dan buru-buru ingin terjun. Kejenuhan dan ketegangan hilang, lebih disebabkan kelelahan duduk di kabin pesawat Hercules. Yang penting bisa langsung bertempur!
+            <br>
+            <br>
+            Penulis/wartawan perang Hendro Soebroto (alm.) menulis dalam bukunya yang berjudul Operasi Udara Di Timor Timur (PSH, 2005, Jakarta) :
+            <br>
+            <br>
+            “...Sekitar pukul 05.45 WITA, tiga menit sebelum matahari terbit, lampu hijau di atas pintu pesawat menyala berbarengan dengan bunyi bel berdering panjang sebagai tanda dimulainya serbuan pasukan lintas udara. Mereka meloncat dari ketinggian antara 900 kaki hingga 1250 kaki...”
+            <br>
+            <br>
+            Ketika giliran saya untuk melompat tiba, saya tinggal menunggu aba-aba dari jump-master. Tetapi tiba-tiba terasa pesawat miring. Bunyi bel berdering panjang juga berhenti dan dua orang jump master di pintu kiri dan kanan Hercules menyilangkan kaki ke pintu, sementara load master buru-buru menutup pintu. Lho, ada apa? Saya bertanya-tanya.
+            <br>
+            <br>
+            Rupanya informasi intel yang tidak tepat sebelumnya tentang adanya senjata penangkis udara di lapangan terbang Dilli dan adanya tembakan gencar dari bawah yang mengenai pesawat Hercules yang kami naiki mempengaruhi pilot untuk segera menyingkir dari wilayah di atas lapangan terbang. Yang paling aman tentulah terbang ke arah laut.
+            <br>
+            <br>
+            Menghentikan penerjunan menyebabkan 78 orang anggota Kopassandha tidak bisa terjun, dan semua “terpaksa” terbawa ke Kupang. Ketika mendarat di pangkalan udara Penfui, saya baru tahu ada sejumlah peluru tembakan dari bawah yang menyebabkan kerusakan kecil di sejumlah C-130B. Bahkan seorang load master di Hercules yang lain tewas terkena peluru yang ditembakkan dari bawah. Kasus seperti itu memang jarang sekali terjadi.
+            <br>
+            <br>
+            Perasaan saya sendiri campur-aduk. Antara kesal, marah, khawatir semua bercampur baur di dalam kabin pesawat C-130B tersebut. Sejumlah anak buah saya telah terjun dan mungkin sudah terlibat tembak-menembak, dan mungkin juga telah menjadi korban. Sementara saya tak berdaya serta malahan tidak mampu memimpin mereka merebut sasaran yang ditentukan. Untung saja “orang kedua” yang mengambilalih pimpinan yaitu Letda Inf. Sunarto mampu dengan cepat mengumpulkan pasukannya. Tetapi itu baru saya ketahui kemudian, setelah situasi di di Dilli dilaporkan kepada pimpinan. Pengalaman tak terlupakan itu dibukukan dalam buku berjudul Hari “H” : 7 Desember 1975 (Kata Hasta Pustaka, 2015) yang dihimpun oleh penulis Atmadji Sumarkidjo.
+            <br>
+            <br>
+            Setelah mendarat di Kupang, saya baru tahu. yang batal terjun tidak hanya saya, karena ada juga Perwira Operasi Grup-1, Mayor Inf. Theo Sjafei (sekarang juga almarhum). Buru-buru kami berdua berusaha mendapat “jatah” terjun pada sortie kedua yang menurut rencana akan menerjunkan pasukan Yonif Linud 502. Permintaan saya tidak dipenuhi karena susunan stick pasukan Baret Hijau sudah sulit untuk diubah lagi dan jumlah pesawat C-130 B Hercules yang tersedia tidak ada lagi. Betul-betul tidak enak suasana pada 7 Desember 1975 itu.
+            <br>
+            <br>
+            Pak Theo dan saya baru terjun di Baucau tiga hari kemudian. Jadi, selama dua hari menanti dengan sia-sia di Kupang, saya selalu berusaha memantau situasi, sampai yakin bahwa mereka mampu mengendalikan situasi.
+            <br>
+            <br>
+            Setiap 7 Desember saya selalu teringat pada peristiwa 42 tahun lalu tersebut. Pada peringatan 40 Tahun penerjunan di Timtim (7 Desember 2015), kami, sisa-sisa pasukan Baret Merah yang terjun pada awal Operasi “Seroja” (dan Syukur Alhamdulillah masih hidup) membuat perayaan sederhana di kompleks Cijantung, di gedung di mana dulu kami menyiapkan payung udara yang akan digunakan untuk terjun.
+            <br>
+            <br>
+            Saya yang waktu menjabat sebagai Menko Polhukam diminta memberikan pidato. Begitu saya berdiri di atas podium dan menatap para hadirin, tiba-tiba rasa haru menghinggapi saya. Kerongkongan terasa kaku dan dengan susah payah saya menahan agar tidak keluar air mata saya.
+            <br>
+            <br>
+            Tiba-tiba saya teringat wajah-wajah anak buah saya yang gugur pada waktu itu. Hanya beberapa jam sebelumnya saya memberi semangat kepada mereka dan berbicara dengan mereka, dan tahu-tahu besoknya mereka sudah tidak bernyawa lagi. Sebanyak 8 orang anak buah saya langsung gugur sebagai syuhada. Belum lagi anggota Kopassandha dari kelompok lain.
+            <br>
+            <br>
+            Dari podium saya melihat wajah-wajah para veteran Timor Timur yang kebetulan masih hidup. Mereka menggunakan Baret Merah kebanggaan, banyak yang sudah tua, bungkuk dan berambut putih, tetapi wajah mereka masih bersemangat seolah mereka masih muda seperti 42 tahun sebelumnya.
+            <br>
+            <br>
+            Selama 5 menit saya terdiam di atas podium sebelum saya bicara. Hadirin juga terdiam, dan saya yakin mereka dihinggapi oleh rasa haru yang serupa.
+            <br>
+            <br>
+            Kemudian saya katakan, gugurnya teman-teman di Timor Timur itulah yang selalu menjadi peringatan bagi saya untuk terus mengabdi kepada Bangsa dan Negara. Teman-teman yang gugur di Timtim itu juga selalu menjadi pengingat hati nurani saya untuk tidak berbuat korupsi atau mencuri uang negara sebagai warganegara yang berusaha dengan jujur dan terhormat. Saya tidak akan pernah menodai pengorbanan mereka!
+            <br>
+            <br>
+            Jadi ketika beberapa waktu lalu ada seseorang menulis di media sosial yang mengatakan bahwa para prajurit Korps Baret Merah terkencing-kencing karena takut sebelum terjun di Timtim, saya adalah orang pertama yang tersinggung. Penulis tersebut memanipulasi fakta dan memfitnah dengan keji para prajurit yang bertempur dan siap mempertaruhkan nyawa mereka tanpa pamrih. Si penulis itu pasti berusia lebih muda dan tidak pernah mengalami bagaimana rasanya saat-saat nyawa berada di ujungnya. Dan siapapun dari 250 orang anggota Kopassandha yang terjun pada dini hari 7 Desember 1975 itu tidak bisa menjamin bahwa dirinya bisa pulang selamat ke keluarganya di Jakarta.
+            <br>
+            <br>
+            Tambahan catatan kecil, saya sendiri meninggalkan asrama di Cijantung untuk terjun di Timtim hanya sehari sebelum anak saya yaitu Uli merayakan ulang tahunnya ke 3. Waktu itu ia terlalu kecil untuk mengetahui mengapa ayahnya tidak berada disampingnya ketika ia akan berulang tahun." 
+
+        </p>
+        <center><img src="/DASDAZ/assets/stories/Veteran/Seroja/GambarSeroja.jpg" alt=""></center>
+    </div>
+    <!--Isi Cerita Veteran Kemerdekaan-->
+    <div id="gam" class="container content" style="display:none">
+        
+    </div>
+    <!--Isi Cerita Veteran Kemerdekaan-->
+    <div id="opm" class="container content" style="display:none">
+        
+    </div>
+
+    <div id="submit" class="container content" style="display:none">
+        <h1>Bagikan Kisahmu!</h1>
+        <hr>
+        <div class="container-xl">
+            <h5 class="d-flex justify-content-start">Bagikan kisah-kisah dari orang terdekat kamu yang pernah terlibat dalam sejarah perang Indonesia!</h5>
+            <br>
+            <h3>Harap cantumkan:</h3>
+            <ul>
+                <li>Nama atau mengisi dengan mengetik "anonim" jika identitas ingin disamarkan</li>
+                <li>Kapan dan lokasi peristiwa itu terjadi.</li>
+                <li>Pangkat, Satuan, dan Bagian komando (jika termasuk dalam pasukan khusus)
+                    <ul>
+                        <li>Masukkan nama laskar atau pekerjaan saat kejadian jika tidak tergabung dalam militer
+                            <br>(polisi, wartawan, laskar hizbullah,warga sipil, dst)
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+
+            <div class="container-xl theForm">
+                <form action="">
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" name="nama" class="form-control form-control-lg">
+                        <br>
+        
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control form-control-lg">
+                        <br>
+        
+                        <label for="pangkat">Pangkat dan Kecabangan</label>
+                        <input type="text" name="nama" class="form-control form-control-lg">
+                        <br>
+        
+                        <label for="cerita">Ceritamu</label>
+                        <textarea name="cerita" class="form-control form-control-lg"></textarea>
+                        <br>
+
+                        <input type="submit" class="form-control form-control-lg">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="container content" style="display:none">
+
+    </div>
+
+<footer class="container">
+    <br>
+  <p>&copy; Veterans 2023</p>
+</footer>
+    <script>
+        function fungsi(namaContent) {
+        var i;
+        var x = document.getElementsByClassName("content");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+        }
+        document.getElementById(namaContent).style.display = "block"; 
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>
